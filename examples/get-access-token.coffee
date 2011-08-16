@@ -4,9 +4,9 @@ everyauth = require 'everyauth'
 everyauth.debug = true;
 
 options =
-  host:   'http://localhost:3000'
-  id:     '-- client id --'
-  secret: '-- client secret --'
+  host:   'http://localhost:3000' # change this
+  id:     '-- client id --'       # change this
+  secret: '-- client secret --'   # change this
 
 current = token = null
 
