@@ -18,10 +18,12 @@ class Gisty
     @
 
   fetch: (id, fn) ->
+    throw new Error 'You should specify gist id for fetch information' unless id?
     @scheme = '/gists/' + id
     request @, fn
 
   comments: (id, fn) ->
+    throw new Error 'You should specify gist id for fetch comments' unless id?
     @scheme = '/gists/' + id + '/comments'
     request @, fn
 
