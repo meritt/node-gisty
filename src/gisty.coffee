@@ -26,7 +26,7 @@ class Gisty
     request @, fn
 
   all: (fn) ->
-    @scheme = '/users/' + @username + '/gists'
+    @scheme = if @options.username? then '/users/' + @options.username + '/gists' else '/gists'
     request @, fn
 
   public: (fn) ->
