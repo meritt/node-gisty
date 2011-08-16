@@ -1,6 +1,6 @@
 # Gisty
 
-A Node.JS wrapper for [Gist's API v3](http://developer.github.com/v3/gists/).
+A Node.JS wrapper for [GitHub gist API v3](http://developer.github.com/v3/gists/).
 
 <!-- [The announcement in Russian of this module in my blog.](http://nko.io/paGOx1) -->
 
