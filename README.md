@@ -31,6 +31,8 @@ Or with CoffeeScript
 		throw new Error error if error
 		console.log filename + "\n" + file.content + "\n\n" for filename, file of gist.files
 
+[See other examples](http://github.com/meritt/node-gisty/tree/master/examples)
+
 Install with NPM
 ----------------
 
