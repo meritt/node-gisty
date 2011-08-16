@@ -7,7 +7,7 @@ A Node.JS wrapper for [GitHub gist API v3](http://developer.github.com/v3/gists/
 How to use with JavaScript
 --------------------------
 
-```JavaScript
+```javascript
 var Gisty = require('gisty').Gisty;
 
 var gist = new Gisty({username: meritt});
@@ -25,7 +25,7 @@ gist.fetch('1111422', function(error, gist) {
 Or with CoffeeScript
 --------------------
 
-```CoffeeScript
+```coffeescript
 Gisty = require('gisty').Gisty
 
 gist = new Gisty username: 'meritt'
@@ -40,16 +40,24 @@ gist.fetch '1111422', (error, gist) ->
 Install with NPM
 ----------------
 
-	npm install gisty
+```
+npm install gisty
+```
 
 How to retrieve GitHub OAuth2 access_token
 ------------------------------------------
 
-Grab latest source code, install all dev dependecies
-	npm link
+Grab latest source code and install all dev dependencies
+
+```
+npm link
+```
 
 Change your host, client id, client secret in [examples/get-access-token.coffee](http://github.com/meritt/node-gisty/blob/master/examples/get-access-token.coffee) and after that run [examples/get-access-token.coffee](http://github.com/meritt/node-gisty/blob/master/examples/get-access-token.coffee)
-	coffee examples/get-access-token.coffee
+
+```
+coffee examples/get-access-token.coffee
+```
 
 API
 ---
