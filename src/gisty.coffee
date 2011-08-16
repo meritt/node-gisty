@@ -10,11 +10,11 @@ xhr = require 'request'
 class Gisty
   api = 'https://api.github.com'
 
-  constructor: (@login, @password) ->
-    @username = @login
+  constructor: (options = {}) ->
+    @setOptions options
 
-  setUsername: (username) ->
-    @username = username
+  setOptions: (@options) ->
+    @options.username = @options.login if @options.login? and not @options.username?
     @
 
   fetch: (id, fn) ->
@@ -38,10 +38,12 @@ class Gisty
     request @, fn
 
   request = (self, fn = ->) ->
-    options =
-      url: api + self.scheme,
-      headers:
-        Authorization: 'Basic ' + new Buffer(self.login + ':' + self.password).toString('base64')
+    options = url: api + self.scheme
+
+    if self.options.token?
+      options['headers'] = Authorization: "token #{self.options.token}"
+    else if self.options.login? and self.options.password?
+      options['headers'] = Authorization: "Basic " + new Buffer(self.options.login + ':' + self.options.password).toString('base64')
 
     xhr options, (error, request, body) ->
       body  = JSON.parse body
