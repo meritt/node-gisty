@@ -2,7 +2,7 @@
   Retrieve public gist
 ###
 
-Gisty = require('./../lib/gisty').Gisty
+Gisty = require('./../lib/gisty')
 
 gist = new Gisty username: 'meritt'
 

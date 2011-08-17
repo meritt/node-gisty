@@ -2,7 +2,7 @@
   Retrieve all users gist with OAuth2 access_token
 ###
 
-Gisty = require('./../lib/gisty').Gisty
+Gisty = require('./../lib/gisty')
 
 gist = new Gisty token: 'OAuth2 access_token', username: 'meritt'
 

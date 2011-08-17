@@ -8,7 +8,7 @@ How to use with JavaScript
 --------------------------
 
 ```javascript
-var Gisty = require('gisty').Gisty;
+var Gisty = require('gisty');
 
 var gist = new Gisty({username: meritt});
 
@@ -26,7 +26,7 @@ Or with CoffeeScript
 --------------------
 
 ```coffeescript
-Gisty = require('gisty').Gisty
+Gisty = require 'gisty'
 
 gist = new Gisty username: 'meritt'
 

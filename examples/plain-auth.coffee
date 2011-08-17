@@ -2,7 +2,7 @@
   Retrieve starred gist with plain authenticate
 ###
 
-Gisty = require('./../lib/gisty').Gisty
+Gisty = require('./../lib/gisty')
 
 gist = new Gisty login: 'login', password: 'password'
 

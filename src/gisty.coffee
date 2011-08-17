@@ -56,4 +56,4 @@ class Gisty
 
       fn.call self, error, body
 
-exports.Gisty = Gisty
+module.exports = Gisty
