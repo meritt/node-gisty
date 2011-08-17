@@ -1,5 +1,5 @@
 ###
-  gisty 0.0.1
+  gisty 0.0.2
   (c) 2011 Alexey Simonenko, Serenity LLC.
   For all details and documentation:
   http://github.com/meritt/node-gisty
