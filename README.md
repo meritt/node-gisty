@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/meritt/node-gisty.png)](http://travis-ci.org/meritt/node-gisty)
 # Gisty
 
 A Node.JS wrapper for [GitHub gist API v3](http://developer.github.com/v3/gists/).
