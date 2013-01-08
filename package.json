@@ -1,6 +1,6 @@
 {
     "name": "gisty"
-  , "version": "0.0.3"
+  , "version": "0.1.0"
   , "description": "Wrapper for the GitHub gist API v3"
   , "keywords": ["github", "gist", "api", "wrapper"]
   , "author": "Alexey Simonenko <alexey@simonenko.su>"
