@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>node-gisty by meritt</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">node-gisty</h1>
+        <p class="header">A Node.JS wrapper for the GitHub gist API v3</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/meritt/node-gisty/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/meritt/node-gisty/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/meritt/node-gisty">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/meritt">meritt</a></p>
+
+
+      </header>
+      <section>
+        <h1>Gisty</h1>
+
+<p>A Node.JS wrapper for the <a href="http://developer.github.com/v3/gists/">GitHub gist API v3</a>.</p>
+
+<h2>How to use with JavaScript</h2>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">Gisty</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gisty'</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">gist</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Gisty</span><span class="p">({</span><span class="nx">username</span><span class="o">:</span> <span class="nx">meritt</span><span class="p">});</span>
+
+<span class="nx">gist</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="s1">'1111422'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">gist</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="nx">filename</span> <span class="k">in</span> <span class="nx">gist</span><span class="p">.</span><span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filename</span> <span class="o">+</span> <span class="s2">"\n"</span> <span class="o">+</span> <span class="nx">gist</span><span class="p">.</span><span class="nx">files</span><span class="p">[</span><span class="nx">filename</span><span class="p">].</span><span class="nx">content</span> <span class="o">+</span> <span class="s2">"\n\n"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>Or with CoffeeScript</h2>
+
+<div class="highlight"><pre><span class="nv">Gisty = </span><span class="nx">require</span> <span class="s">'gisty'</span>
+
+<span class="nv">gist = </span><span class="k">new</span> <span class="nx">Gisty</span> <span class="nv">username: </span><span class="s">'meritt'</span>
+
+<span class="nx">gist</span><span class="p">.</span><span class="nx">fetch</span> <span class="s">'1111422'</span><span class="p">,</span> <span class="nf">(error, gist) -&gt;</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="nb">Error</span> <span class="nx">error</span> <span class="k">if</span> <span class="nx">error</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span> <span class="s">"</span><span class="si">#{</span><span class="nx">filename</span><span class="si">}</span><span class="s">\n</span><span class="si">#{</span><span class="nx">file</span><span class="p">.</span><span class="nx">content</span><span class="si">}</span><span class="s">\n\n"</span> <span class="k">for</span> <span class="nx">filename</span><span class="p">,</span> <span class="nx">file</span> <span class="k">of</span> <span class="nx">gist</span><span class="p">.</span><span class="nx">files</span>
+</pre></div>
+
+<p><a href="http://github.com/meritt/node-gisty/tree/master/examples">See other examples</a></p>
+
+<hr><h2>Install with NPM</h2>
+
+<pre><code>npm install gisty
+</code></pre>
+
+<h2>How to retrieve GitHub OAuth2 access_token</h2>
+
+<p>Grab latest source code and install all dev dependencies</p>
+
+<pre><code>npm link
+</code></pre>
+
+<p>Change your host, client id, client secret in <a href="http://github.com/meritt/node-gisty/blob/master/examples/get-access-token.coffee">examples/get-access-token.coffee</a> and after that run <a href="http://github.com/meritt/node-gisty/blob/master/examples/get-access-token.coffee">examples/get-access-token.coffee</a></p>
+
+<pre><code>coffee examples/get-access-token.coffee
+</code></pre>
+
+<h2>API</h2>
+
+<ul>
+<li>fetch (*gist id*, <em>callback</em>)</li>
+<li>comments (*gist id*, <em>callback</em>)</li>
+<li>all (*callback*)</li>
+<li>public (*callback*)</li>
+<li>starred (*callback*)</li>
+</ul><h2>Author</h2>
+
+<ul>
+<li>
+<a href="mailto:alexey@simonenko.su">Alexey Simonenko</a>, <a href="http://simonenko.su">simonenko.su</a>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-37507032-6");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
