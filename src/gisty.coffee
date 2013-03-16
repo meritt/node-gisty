@@ -1,8 +1,3 @@
-###
-  node-gisty 0.1.0
-  (c) 2011-2012 Alexey Simonenko, Serenity LLC
-###
-
 xhr = require 'request'
 
 class Gisty
