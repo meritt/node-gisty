@@ -36,7 +36,7 @@ class Gisty
     options =
       url: api + self.scheme
       headers:
-        "User-Agent": "Gisty/0.1.1 (https://github.com/meritt/node-gisty)"
+        "User-Agent": "Gisty/0.1.2 (https://github.com/meritt/node-gisty)"
 
     if self.options.token?
       options.headers.Authorization = "token #{self.options.token}"
