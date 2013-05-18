@@ -33,12 +33,15 @@ class Gisty
     request @, fn
 
   request = (self, fn = ->) ->
-    options = url: api + self.scheme
+    options =
+      url: api + self.scheme
+      headers:
+        "User-Agent": "Gisty/0.1.1 (https://github.com/meritt/node-gisty)"
 
     if self.options.token?
-      options['headers'] = Authorization: "token #{self.options.token}"
+      options.headers.Authorization = "token #{self.options.token}"
     else if self.options.login? and self.options.password?
-      options['headers'] = Authorization: "Basic " + new Buffer(self.options.login + ':' + self.options.password).toString('base64')
+      options.headers.Authorization = "Basic " + new Buffer(self.options.login + ':' + self.options.password).toString('base64')
 
     xhr options, (error, request, body) ->
       body  = JSON.parse body
