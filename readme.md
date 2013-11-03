@@ -67,3 +67,8 @@ Author
 ------
 
 * [Alexey Simonenko](mailto:alexey@simonenko.su), [simonenko.su](http://simonenko.su)
+---
+
+## License
+
+The MIT License, see the included `license.md` file.
