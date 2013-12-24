@@ -2,7 +2,7 @@
 
 [![NPM version](https://badge.fury.io/js/gisty.png)](http://badge.fury.io/js/gisty) [![Dependency Status](https://david-dm.org/meritt/node-gisty.png)](https://david-dm.org/meritt/node-gisty)
 
-A Node.JS wrapper for the [GitHub gist API v3](http://developer.github.com/v3/gists/).
+A node.js wrapper for the GitHub [Gists API v3](http://developer.github.com/v3/gists/).
 
 ## Installation
 
@@ -15,16 +15,18 @@ $ npm install gisty
 ```js
 var Gisty = require('gisty');
 
-var gist = new Gisty({username: meritt});
+var gist = new Gisty({
+  username: 'meritt'
+});
 
 gist.fetch('1111422', function(error, gist) {
-	if (error) {
-		throw new Error(error);
-	}
-	
-	for (filename in gist.files) {
-		console.log(filename + "\n" + gist.files[filename].content + "\n\n");
-	}
+  if (error) {
+    throw new Error(error);
+  }
+
+  for (filename in gist.files) {
+    console.log(filename + "\n" + gist.files[filename].content + "\n\n");
+  }
 });
 ```
 
@@ -34,8 +36,8 @@ Gisty = require 'gisty'
 gist = new Gisty username: 'meritt'
 
 gist.fetch '1111422', (error, gist) ->
-	throw new Error error if error
-	console.log "#{filename}\n#{file.content}\n\n" for filename, file of gist.files
+  throw new Error error if error
+  console.log "#{filename}\n#{file.content}\n\n" for filename, file of gist.files
 ```
 
 [See other examples](http://github.com/meritt/node-gisty/tree/master/examples)
@@ -69,3 +71,5 @@ $ coffee examples/get-access-token.coffee
 ## License
 
 The MIT License, see the included `license.md` file.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/meritt/node-gisty/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
