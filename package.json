@@ -11,15 +11,16 @@
       , "url": "https://github.com/meritt/node-gisty.git"
     }
   , "engines": {
-      "node": ">=0.8.0"
+      "node": ">=0.10"
     }
   , "dependencies": {
       "request": "2.x"
     }
   , "devDependencies": {
-        "coffee-script": "1.6.x"
+        "coffee-script": "~1.7.1"
       , "everyauth": "0.2.x"
       , "express": "2.5.x"
       , "ejs": "0.7.x"
     }
+  , "license": "MIT"
 }
