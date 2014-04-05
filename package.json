@@ -22,5 +22,8 @@
       , "express": "2.5.x"
       , "ejs": "0.7.x"
     }
+  , "scripts": {
+      "build": "./node_modules/.bin/coffee -c -o lib/ src/"
+    }
   , "license": "MIT"
 }
