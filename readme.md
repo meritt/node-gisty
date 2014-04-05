@@ -1,12 +1,12 @@
 # gisty
 
-[![NPM version](https://badge.fury.io/js/gisty.png)](http://badge.fury.io/js/gisty) [![Dependency Status](https://david-dm.org/meritt/node-gisty.png)](https://david-dm.org/meritt/node-gisty)
+[![NPM version](https://badge.fury.io/js/gisty.svg)](http://badge.fury.io/js/gisty) [![Dependency Status](https://david-dm.org/meritt/node-gisty.svg?theme=shields.io)](https://david-dm.org/meritt/node-gisty)
 
 A node.js wrapper for the GitHub [Gists API v3](http://developer.github.com/v3/gists/).
 
 ## Installation
 
-```
+```bash
 $ npm install gisty
 ```
 
@@ -46,23 +46,23 @@ gist.fetch '1111422', (error, gist) ->
 
 Grab latest source code and install all dev dependencies
 
-```
+```bash
 $ npm link
 ```
 
 Change your host, client id, client secret in [examples/get-access-token.coffee](http://github.com/meritt/node-gisty/blob/master/examples/get-access-token.coffee) and after that run [examples/get-access-token.coffee](http://github.com/meritt/node-gisty/blob/master/examples/get-access-token.coffee)
 
-```
+```bash
 $ coffee examples/get-access-token.coffee
 ```
 
 ## API
 
-* fetch (gist_id, callback)
-* comments (gist_id, callback)
-* all (callback)
-* public (callback)
-* starred (callback)
+* `fetch(gist_id, callback)`
+* `comments(gist_id, callback)`
+* `all(callback)`
+* `public(callback)`
+* `starred(callback)`
 
 ## Author
 
